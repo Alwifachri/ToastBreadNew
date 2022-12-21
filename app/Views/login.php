@@ -51,6 +51,7 @@
                     </div>
                     <div class="text-center" style="margin-top: 40px;">
                         <a href="/register">Dont Have an Account? Sign Up</a>
+                        <h1>tess</h1>
                     </div>
                 </form>
             </div>
