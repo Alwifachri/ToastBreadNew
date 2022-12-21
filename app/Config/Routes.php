@@ -37,6 +37,7 @@ $routes->get('/Shop', 'Shop::index', ['filter' => 'auth']);
 $routes->get('/register', 'Register');
 $routes->get('/SelectedItem', 'SelectedItem::index', ['filter' => 'auth']);
 $routes->get('/profile', 'Profile::index', ['filter' => 'auth']);
+$routes->get('/cart', 'Cart::index', ['filter' => 'auth']);
 /**
  * --------------------------------------------------------------------
  * Additional Routing
