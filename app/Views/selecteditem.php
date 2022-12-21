@@ -57,7 +57,7 @@
                         <button class="btn btn-outline-secondary" type="button">+</button>
                     </div>
                 </div>
-                <button type="button" class="text-center btn btn-primary mt-3 mb-5">BAYAR</button>
+                <button type="button" class="text-center btn btn-primary mt-3 mb-5">NEXT</button>
             </div>
 
         </div>
