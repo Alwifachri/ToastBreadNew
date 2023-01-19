@@ -63,8 +63,8 @@
                         </label>
                         <input type="text" name="address" class="form-control" id="InputForName" value="<?= set_value('address') ?>">
                     </div>
-                    <div class="text-center" style="margin-end: 40px; margin-bottom:25px;">
-                        <button type="submit" class="btn btn-lg" style="background-color: #45f5a3; color: dark; text-bold">
+                    <div class="text-center" style="margin-bottom:25px;">
+                        <button type="submit" class="btn btn-lg" style="background-color: #45f5a3; color: dark;">
                             <h3>BAYAR</h3>
                         </button>
                     </div>

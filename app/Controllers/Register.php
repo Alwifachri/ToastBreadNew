@@ -37,6 +37,8 @@ class Register extends Controller
 				'user_address' 	=> $this->request->getVar('address'),
 			];
 			$model->save($data);
+			session()->setFlashdata('message', 'Berhasil Daftar!');
+			session()->setFlashdata('alert-class', 'alert-success');
 			return redirect()->to('/login');
 		} else {
 			$data['validation'] = $this->validator;

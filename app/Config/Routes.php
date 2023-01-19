@@ -36,8 +36,18 @@ $routes->get('/login', 'Login');
 $routes->get('/Shop', 'Shop::index', ['filter' => 'auth']);
 $routes->get('/register', 'Register');
 $routes->get('/SelectedItem', 'SelectedItem::index', ['filter' => 'auth']);
-$routes->get('/profile', 'Profile::index', ['filter' => 'auth']);
+$routes->get('/profile(:num)', 'Profile::index', ['filter' => 'auth']);
 $routes->get('/cart', 'Cart::index', ['filter' => 'auth']);
+
+$routes->get('/admin', 'Admin');
+$routes->get('/transaction', 'Transaction');
+$routes->get('/product', 'Product');
+$routes->get('/product/create', 'Product::create');
+$routes->get('/product/save', 'Product::save');
+$routes->get('/product/edit/(:segment)', 'Product::edit/$1');
+$routes->get('/product/delete', 'Product::delete');
+$routes->get('/product/(:segment)', 'Product::detail/$1');
+$routes->get('/users', 'Users');
 /**
  * --------------------------------------------------------------------
  * Additional Routing

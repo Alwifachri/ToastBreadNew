@@ -40,14 +40,14 @@
         <div class="row justify-content-md-center">
 
             <div class="col-6" style="background-color: #FAEAB1;">
-                <h1 style="text-align:center; margin: 20px;">POFILE</h1>
+                <h1 style="text-align:center; margin: 20px;">PROFILE</h1>
                 <?php if (isset($validation)) : ?>
                     <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
                 <?php endif; ?>
-                <form action="/#/save" method="post">
+                <form action="/profile/update" method="post">
                     <div class="mb-3">
                         <label for="InputForName" class="form-label">NAMA :</label>
-                        <input type="text" name="name" class="form-control" id="InputForName" value="<?= set_value('name') ?>">
+                        <input type="text" name="name" class="form-control" id="InputForName" value="<?= set_value('email') ?>">
                     </div>
                     <div class="mb-3">
                         <label for="InputForEmail" class="form-label">Email :</label>
@@ -57,7 +57,7 @@
                         <label for="InputForAddress" class="form-label">ALAMAT :</label>
                         <input type="text" name="address" class="form-control" id="InputForName" value="<?= set_value('address') ?>">
                     </div>
-                    <div class="row align-items-end" style="margin-end: 40px; margin-bottom:25px;">
+                    <div class="text-center" style="margin-bottom:25px;">
                         <button type="submit" class="btn btn-lg" style="background-color: #4579f5; color: white;">SIMPAN</button>
                     </div>
                 </form>
