@@ -22,12 +22,12 @@
                     <li class="nav-item">
                         <a class="nav-link active text-white" href="/shop">Shop</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link text-white" href="/profile">Profile</a>
-                    </li>
-                    <li class="nav-item">
+                    </li> -->
+                    <!-- <li class="nav-item">
                         <a class="nav-link text-white" href="/cart">Cart</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link text-white" href="Login/logout">Logout</a>
                     </li>
@@ -39,38 +39,27 @@
     <div class="container text-center">
         <div class="row align-items-start">
             <div class="card" style="margin-top: 30px; margin-bottom: 25px;">
-                <img class="card-img-top" src="/img/kue1.png" alt="Card image cap">
+                <img class="card-img-top" src="/img/<?= $product['product_image']; ?>" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">Black Forest</h5>
-
-
+                    <h5 class="card-title"><?= $product['product_name']; ?></h5>
                 </div>
             </div>
             <div class="deskripsi " style="margin-top: 50px ">
                 <div class="text-left">
-                    <h1>Nama Barang</h1>
-                    <p>Some quick example text to build on the card title and make up the bulk of the card's content. BLACK FORREST ITUU SANGAT ENAK DAN LEZAT BAU SANGAT SUKA EAKAN BLACK FOREST DENGAN RASA COKELAT, APALAGI DI TABAH DENGAN SAUUCE HOT LAVA</p>
+                    <h1><?= $product['product_name']; ?></h1>
+                    <h3 class="mb-4"><?= $product['product_desc']; ?></h3>
+                    <h3>Rp. <?= $product['product_price']; ?></h3>
                     <h6 style="margin-top: 50px ">Jumlah Barang</h6>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Qty" aria-label="Recipient's username with two button addons">
-                        <button class="btn btn-outline-secondary" type="button">-</button>
-                        <button class="btn btn-outline-secondary" type="button">+</button>
+                        <input name="qty" id="qty" type="text" class="form-control" placeholder="Qty" aria-label="Recipient's username with two button addons">
                     </div>
                 </div>
-                <button type="button" class="text-center btn btn-primary mt-3 mb-5">NEXT</button>
+                <button type="button" class="text-center btn btn-primary mt-3 mb-5">Order</button>
             </div>
 
         </div>
     </div>
 
-    <footer class="text-center text-white" style="background-color: #C58940;">
-        <!-- Grid container -->
-        <div class="container p-4">
-            <h5>Toast Bread</h5>
-            <h4>Wholesome Bread for all</h4>
-        </div>
-        <!-- Grid container -->
-    </footer>
     <!-- CSS -->
     <style>
         .catalog {

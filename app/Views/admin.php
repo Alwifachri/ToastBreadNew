@@ -61,7 +61,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/transaction" class="nav-link">
+                            <a href="/orders" class="nav-link">
                                 <i class="nav-icon fas fa-table"></i>
                                 <p>
                                     Transaction
@@ -123,7 +123,7 @@
                             <!-- small box -->
                             <div class="small-box bg-info">
                                 <div class="inner">
-                                    <h3>150</h3>
+                                    <h3>1</h3>
                                     <p>Transaction</p>
                                 </div>
                             </div>
@@ -133,7 +133,7 @@
                             <!-- small box -->
                             <div class="small-box bg-success">
                                 <div class="inner">
-                                    <h3>53</h3>
+                                    <h3>10</h3>
                                     <p>Product</p>
                                 </div>
                             </div>
@@ -143,7 +143,7 @@
                             <!-- small box -->
                             <div class="small-box bg-warning">
                                 <div class="inner">
-                                    <h3>44</h3>
+                                    <h3>2</h3>
                                     <p>Users</p>
                                 </div>
                             </div>

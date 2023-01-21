@@ -61,7 +61,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/orders" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-table"></i>
                                 <p>
                                     Transaction
@@ -101,12 +101,12 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Product</h1>
+                            <h1 class="m-0">Transaction</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Product</li>
+                                <li class="breadcrumb-item active">Transaction</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -117,42 +117,30 @@
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
-                    <!-- Add Product -->
-                    <div class="d-flex flex-row-reverse">
-                        <a href="product/create" class="btn btn-primary mb-3">ADD NEW PRODUCT</a>
-                    </div>
-                    <?php if (session()->getFlashdata('message')) : ?>
-                        <div class="alert alert-success" role="alert">
-                            <?= session()->getFlashdata('message'); ?>
-                        </div>
-                    <?php endif; ?>
                     <!-- Small boxes (Stat box) -->
                     <table class="table table-bordered table-striped table-hover">
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Product Name</th>
-                                <th>Price</th>
-                                <th>Description</th>
-                                <th>Image</th>
-                                <th>Action</th>
+                                <th>Invoice Number</th>
+                                <th>Transaction Date</th>
+                                <th>Customer ID</th>
+                                <th>Product ID</th>
+                                <th>QTY</th>
+                                <th>Grand Total</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php $i = 1; ?>
-                            <?php foreach ($product as $d) : ?>
+                            <?php foreach ($order as $d) : ?>
                                 <tr>
                                     <td><?= $i++; ?></td>
-                                    <td><?= $d['product_name']; ?></td>
-                                    <td><?= $d['product_price']; ?></td>
-                                    <td style="width: 30%;"><?= $d['product_desc']; ?></td>
-                                    <td>
-                                        <img src="/img/<?= $d['product_image']; ?>" class="product-img" alt="">
-                                    </td>
-                                    <td class="d-flex flex-column m-1">
-                                        <a href="/product/edit/<?= $d['product_id']; ?>" class="btn btn-success mb-1">Edit</a>
-                                        <a href="product/delete/<?= $d['product_id']; ?>" class="btn btn-danger" onclick="return confirm('Hapus Data ?')">Delete</a>
-                                    </td>
+                                    <td><?= $d['invoice_no']; ?></td>
+                                    <td><?= $d['transaction_date']; ?></td>
+                                    <td><?= $d['user_id']; ?></td>
+                                    <td><?= $d['product_id']; ?></td>
+                                    <td><?= $d['qty']; ?></td>
+                                    <td><?= $d['grand_total']; ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
@@ -169,14 +157,6 @@
         <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
-    <!-- CSS -->
-    <style>
-        .product-img {
-            width: 70%;
-            height: 25vh;
-            object-fit: cover;
-        }
-    </style>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 

@@ -21,7 +21,6 @@ class Admin extends Controller
             'product' => $this->products->getProduct(),
             'user' => $this->users->getUser()
         ];
-        dd($data);
         helper(['form']);
         return view('admin', $data);;
     }

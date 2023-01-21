@@ -2,25 +2,29 @@
 
 namespace App\Controllers;
 
+use App\Models\OrderModel;
 use App\Models\ProductModel;
 use CodeIgniter\Controller;
 
-class Dashboard extends Controller
+class Orders extends Controller
 {
+    protected $orders;
     protected $products;
     public function __construct()
     {
+        $this->orders = new OrderModel();
         $this->products = new ProductModel();
     }
 
     public function index()
     {
-        $data = [
-            'product' => $this->products->getProduct()
-        ];
 
+        $data = [
+            'product' => $this->products->getProduct(),
+            'order' => $this->orders->getOrder(),
+        ];
+        // dd($query);
         helper(['form']);
-        // dd($data);
-        return view('dashboard', $data);
+        return view('orders', $data);
     }
 }

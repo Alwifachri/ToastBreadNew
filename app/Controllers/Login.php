@@ -10,7 +10,7 @@ class Login extends Controller
     public function index()
     {
         helper(['form']);
-        echo view('login');
+        echo view('login',);
     }
 
     public function auth()
@@ -25,10 +25,11 @@ class Login extends Controller
             $verify_pass = password_verify($password, $pass);
             if ($verify_pass) {
                 $ses_data = [
-                    'user_id'       => $data['user_id'],
-                    'user_name'     => $data['user_name'],
+                    'user_id'   => $data['user_id'],
+                    'user_name' => $data['user_name'],
                     'user_email'    => $data['user_email'],
-                    'logged_in'     => TRUE
+                    'user_address'  => $data['user_address'],
+                    'logged_in' => TRUE
                 ];
                 $session->set($ses_data);
                 return redirect()->to('/shop');

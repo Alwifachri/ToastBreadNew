@@ -68,14 +68,6 @@
         </div>
     </div>
 
-    <footer class="text-center text-white" style="background-color: #C58940;">
-        <!-- Grid container -->
-        <div class="container p-4">
-            <h5>Toast Bread</h5>
-            <h4>Wholesome Bread for all</h4>
-        </div>
-        <!-- Grid container -->
-    </footer>
 
     <!-- Popper.js first, then Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

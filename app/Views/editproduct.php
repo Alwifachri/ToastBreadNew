@@ -120,31 +120,35 @@
                 <div class="container-fluid">
                     <!-- Small boxes (Stat box) -->
                     <?php csrf_field() ?>
-                    <form action="/product/update/<?= $product['product_id']; ?>" method="post">
+                    <form action="/product/update/<?= $product['product_id']; ?>" method="post" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="productName" class="form-label">Product Name</label>
-                            <input type="text" name="productName" class="form-control " id="productName" <?= ($validation->hasError('product_name')) ? 'is-invalid' : ''; ?>" value="<?= $product['product_name']; ?>" autofocus>
+                            <input type="text" name="productName" class="form-control <?= ($validation->hasError('product_name')) ? 'is-invalid' : ''; ?> " id="productName" value="<?= $product['product_name']; ?>" autofocus>
                             <div class="invalid-feedback">
                                 <?= $validation->getError('product_name'); ?>
                             </div>
                         </div>
                         <div class=" mb-3">
                             <label for="productPrice" class="form-label">Price</label>
-                            <input type="text" name="productPrice" class="form-control " id="productPrice" <?= ($validation->hasError('product_price')) ? 'is-invalid' : ''; ?>" value="<?= $product['product_price']; ?>">
+                            <input type="text" name="productPrice" class="form-control <?= ($validation->hasError('product_price')) ? 'is-invalid' : ''; ?>" id="productPrice" value="<?= $product['product_price']; ?>">
                             <div class="invalid-feedback">
                                 <?= $validation->getError('product_price'); ?>
                             </div>
                         </div>
                         <div class=" mb-3">
                             <label for="productDesc" class="form-label">Product Description</label>
-                            <textarea name="productDesc" class="form-control " id="productDesc" style="height: 150px" <?= ($validation->hasError('product_desc')) ? 'is-invalid' : ''; ?>"><?= $product['product_desc']; ?></textarea>
+                            <textarea name="productDesc" class="form-control <?= ($validation->hasError('product_desc')) ? 'is-invalid' : ''; ?>" id="productDesc" style="height: 150px"><?= $product['product_desc']; ?></textarea>
                             <div class="invalid-feedback">
                                 <?= $validation->getError('product_desc'); ?>
                             </div>
                         </div>
-                        <div class=" mb-3">
+                        <!-- <div class=" mb-3">
                             <label for="productImage" class="form-label">Image</label>
                             <input type="text" name="productImage" class="form-control" id="productImage" value="<?= $product['product_image']; ?>">
+                        </div> -->
+                        <div class="mb-3">
+                            <label for="productImage" class="form-label">Product Image</label>
+                            <input class="form-control" type="file" id="productImage" name="productImage">
                         </div>
                         <button type=" submit" class="btn btn-primary" onclick="return confirm('Ubah Data ?')">Submit</button>
                     </form>

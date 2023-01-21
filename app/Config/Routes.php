@@ -35,12 +35,13 @@ $routes->get('/', 'Dashboard::index');
 $routes->get('/login', 'Login');
 $routes->get('/Shop', 'Shop::index', ['filter' => 'auth']);
 $routes->get('/register', 'Register');
-$routes->get('/SelectedItem', 'SelectedItem::index', ['filter' => 'auth']);
-$routes->get('/profile(:num)', 'Profile::index', ['filter' => 'auth']);
+// $routes->get('/SelectedItem', 'SelectedItem::index', ['filter' => 'auth']);
+$routes->get('/shop/selecteditem/(:segment)', 'Shop::selected/$1');
+$routes->get('/profile/(:segment)', 'Profile::editprofile/$1');
 $routes->get('/cart', 'Cart::index', ['filter' => 'auth']);
 
 $routes->get('/admin', 'Admin');
-$routes->get('/transaction', 'Transaction');
+$routes->get('/orders', 'Orders');
 $routes->get('/product', 'Product');
 $routes->get('/product/create', 'Product::create');
 $routes->get('/product/save', 'Product::save');

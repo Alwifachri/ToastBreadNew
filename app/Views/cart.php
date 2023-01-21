@@ -22,9 +22,9 @@
                     <li class="nav-item">
                         <a class="nav-link active text-white" href="/shop">Shop</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link text-white" href="#">Profile</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#">Cart</a>
                     </li>
@@ -36,9 +36,8 @@
         </div>
     </nav>
 
-    <div class="container" style="margin-top: 150px; margin-bottom:340px;">
-        <div class="row justify-content-md-center">
-
+    <div class="container">
+        <div class="row justify-content-md-center m-4">
             <div class="col-6" style="background-color: #FAEAB1;">
                 <h1 style="text-align:center; margin: 20px;">CART</h1>
                 <?php if (isset($validation)) : ?>
@@ -72,17 +71,6 @@
             </div>
         </div>
     </div>
-
-    <footer class="text-center text-white" style="background-color: #C58940;">
-        <!-- Grid container -->
-        <div class="container p-4">
-            <h5>Toast Bread</h5>
-            <h4>Wholesome Bread for all</h4>
-        </div>
-        <!-- Grid container -->
-    </footer>
-    <!-- CSS -->
-    <style>
 
     </style>
     <!-- Popper.js first, then Bootstrap JS -->

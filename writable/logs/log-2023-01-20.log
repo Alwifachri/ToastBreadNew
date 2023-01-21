@@ -1,0 +1,117 @@
+CRITICAL - 2023-01-20 10:48:53 --> Column 'product_image' cannot be null
+#0 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `pr...')
+#1 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Database\BaseBuilder.php(2249): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Model.php(755): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Model.php(574): CodeIgniter\Model->insert(Array, false)
+#6 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\app\Controllers\Product.php(68): CodeIgniter\Model->save(Array)
+#7 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(918): App\Controllers\Product->save()
+#8 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Alwi F...')
+#12 {main}
+CRITICAL - 2023-01-20 22:35:17 --> Undefined variable: product
+#0 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\app\Views\shop.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\Alwi F...', 44, Array)
+#1 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\View\View.php(246): include('C:\\Users\\Alwi F...')
+#2 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Common.php(1119): CodeIgniter\View\View->render('shop', Array, true)
+#3 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\app\Controllers\Shop.php(12): view('shop')
+#4 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(918): App\Controllers\Shop->index()
+#5 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shop))
+#6 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Alwi F...')
+#9 {main}
+CRITICAL - 2023-01-20 22:46:50 --> Undefined variable: d
+#0 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\app\Views\selecteditem.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\Alwi F...', 42, Array)
+#1 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\View\View.php(246): include('C:\\Users\\Alwi F...')
+#2 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Common.php(1119): CodeIgniter\View\View->render('selecteditem', Array, true)
+#3 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\app\Controllers\Shop.php(33): view('selecteditem', Array)
+#4 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(918): App\Controllers\Shop->selected('2')
+#5 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shop))
+#6 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Alwi F...')
+#9 {main}
+CRITICAL - 2023-01-20 23:02:12 --> Call to undefined method App\Models\UserModel::getProduct
+#0 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\app\Controllers\Profile.php(21): CodeIgniter\Model->__call('getProduct', Array)
+#1 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(918): App\Controllers\Profile->index()
+#2 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#3 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Alwi F...')
+#6 {main}
+CRITICAL - 2023-01-20 23:04:28 --> Too few arguments to function App\Controllers\Profile::index(), 0 passed in C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php on line 918 and exactly 1 expected
+#0 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(918): App\Controllers\Profile->index()
+#1 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#2 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Alwi F...')
+#5 {main}
+CRITICAL - 2023-01-20 23:07:40 --> Undefined index: product_id
+#0 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\app\Views\shop.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\Alwi F...', 26, Array)
+#1 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\View\View.php(246): include('C:\\Users\\Alwi F...')
+#2 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Common.php(1119): CodeIgniter\View\View->render('shop', Array, true)
+#3 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\app\Controllers\Shop.php(26): view('shop', Array)
+#4 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(918): App\Controllers\Shop->index()
+#5 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shop))
+#6 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Alwi F...')
+#9 {main}
+CRITICAL - 2023-01-20 23:08:03 --> Undefined variable: user
+#0 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\app\Views\shop.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\Alwi F...', 26, Array)
+#1 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\View\View.php(246): include('C:\\Users\\Alwi F...')
+#2 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Common.php(1119): CodeIgniter\View\View->render('shop', Array, true)
+#3 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\app\Controllers\Shop.php(26): view('shop', Array)
+#4 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(918): App\Controllers\Shop->index()
+#5 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shop))
+#6 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Alwi F...')
+#9 {main}
+CRITICAL - 2023-01-20 23:08:35 --> Undefined variable: users
+#0 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\app\Views\shop.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\Alwi F...', 26, Array)
+#1 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\View\View.php(246): include('C:\\Users\\Alwi F...')
+#2 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Common.php(1119): CodeIgniter\View\View->render('shop', Array, true)
+#3 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\app\Controllers\Shop.php(26): view('shop', Array)
+#4 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(918): App\Controllers\Shop->index()
+#5 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shop))
+#6 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Alwi F...')
+#9 {main}
+CRITICAL - 2023-01-20 23:27:55 --> Undefined property: CodeIgniter\View\View::$session
+#0 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\app\Views\shop.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\Alwi F...', 41, Array)
+#1 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\View\View.php(246): include('C:\\Users\\Alwi F...')
+#2 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Common.php(1119): CodeIgniter\View\View->render('shop', Array, true)
+#3 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\app\Controllers\Shop.php(26): view('shop', Array)
+#4 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(918): App\Controllers\Shop->index()
+#5 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shop))
+#6 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Alwi F...')
+#9 {main}
+CRITICAL - 2023-01-20 23:28:21 --> Undefined property: CodeIgniter\View\View::$session
+#0 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\app\Views\shop.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\Alwi F...', 41, Array)
+#1 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\View\View.php(246): include('C:\\Users\\Alwi F...')
+#2 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Common.php(1119): CodeIgniter\View\View->render('shop', Array, true)
+#3 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\app\Controllers\Shop.php(26): view('shop', Array)
+#4 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(918): App\Controllers\Shop->index()
+#5 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shop))
+#6 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Alwi F...')
+#9 {main}
+CRITICAL - 2023-01-20 23:29:21 --> Undefined property: CodeIgniter\View\View::$session
+#0 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\app\Views\shop.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\Alwi F...', 41, Array)
+#1 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\View\View.php(246): include('C:\\Users\\Alwi F...')
+#2 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Common.php(1119): CodeIgniter\View\View->render('shop', Array, true)
+#3 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\app\Controllers\Shop.php(26): view('shop', Array)
+#4 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(918): App\Controllers\Shop->index()
+#5 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shop))
+#6 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Alwi Fachri\Downloads\Compressed\login-register-CodeIgniter4-master\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\Alwi F...')
+#9 {main}

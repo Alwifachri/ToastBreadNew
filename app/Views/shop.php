@@ -22,12 +22,12 @@
                     <li class="nav-item">
                         <a class="nav-link active text-white" href="/shop">Shop</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link text-white" href="/profile">Profile</a>
-                    </li>
-                    <li class="nav-item">
+                    </li> -->
+                    <!-- <li class="nav-item">
                         <a class="nav-link text-white" href="/cart">Cart</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link text-white" href="Login/logout">Logout</a>
                     </li>
@@ -38,84 +38,24 @@
 
     <div class="container" style="margin-top: 25px; margin-bottom: 25px;">
         <div class="catalog">
+            <h3>Welcome Back <?= $session['user_name']; ?></h3>
             <h1>Catalog</h1>
         </div>
         <div class="row justify-content-md-center">
-            <div class="card">
-                <img class="card-img-top" src="/img/kue1.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Black Forest</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="/SelectedItem" class="btn btn-primary">Go somewhere</a>
+            <?php foreach ($product as $d) : ?>
+                <div class="card">
+                    <img class="card-img-top" src="/img/<?= $d['product_image']; ?>" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><?= $d['product_name']; ?></h5>
+                        <p class="card-text">Rp. <?= $d['product_price']; ?></p>
+                        <p class="card-text"><?= $d['product_desc']; ?></p>
+                        <a href="/shop/selecteditem/<?= $d['product_id']; ?>" class="btn btn-primary">Details</a>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="/img/blackforest.jpeg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Black Forest</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="/img/blackforest.jpeg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Black Forest</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="/img/blackforest.jpeg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Black Forest</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="/img/blackforest.jpeg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Black Forest</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="/img/blackforest.jpeg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Black Forest</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="/img/blackforest.jpeg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Black Forest</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="/img/blackforest.jpeg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Black Forest</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 
-    <footer class="text-center text-white" style="background-color: #C58940;">
-        <!-- Grid container -->
-        <div class="container p-4">
-            <h5>Toast Bread</h5>
-            <h4>Wholesome Bread for all</h4>
-        </div>
-        <!-- Grid container -->
-    </footer>
     <!-- CSS -->
     <style>
         .catalog {

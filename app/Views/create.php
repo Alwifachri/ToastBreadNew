@@ -119,32 +119,28 @@
             <section class="content">
                 <div class="container-fluid">
                     <!-- Add Product -->
+                    <?= $validation->listErrors(); ?>
                     <?php csrf_field() ?>
-                    <form action="/product/save" method="post">
+                    <form action="/product/save" method="post" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="productName" class="form-label">Product Name</label>
-                            <input type="text" name="productName" class="form-control <?= ($validation->hasError('product_name')) ? 'is-invalid' : ''; ?>" id="productName" autofocus>
-                            <div class="invalid-feedback">
-                                <?= $validation->getError('product_name'); ?>
-                            </div>
+                            <input type="text" name="productName" class="form-control" id="productName" autofocus>
                         </div>
                         <div class=" mb-3">
                             <label for="productPrice" class="form-label">Price</label>
-                            <input type="text" name="productPrice" class="form-control <?= ($validation->hasError('product_price')) ? 'is-invalid' : ''; ?>" id="productPrice">
-                            <div class="invalid-feedback">
-                                <?= $validation->getError('product_price'); ?>
-                            </div>
+                            <input type="text" name="productPrice" class="form-control" id="productPrice">
                         </div>
                         <div class=" mb-3">
                             <label for="productDesc" class="form-label">Product Description</label>
-                            <textarea name="productDesc" class="form-control <?= ($validation->hasError('product_desc')) ? 'is-invalid' : ''; ?>" id="productDesc" style="height: 150px"></textarea>
-                            <div class="invalid-feedback">
-                                <?= $validation->getError('product_desc'); ?>
-                            </div>
+                            <textarea name="productDesc" class="form-control" id="productDesc" style="height: 150px"></textarea>
                         </div>
-                        <div class=" mb-3">
+                        <!-- <div class=" mb-3">
                             <label for="productImage" class="form-label">Image</label>
                             <input type="text" name="productImage" class="form-control" id="productImage">
+                        </div> -->
+                        <div class="mb-3">
+                            <label for="productImage" class="form-label">Product Image</label>
+                            <input class="form-control" type="file" id="productImage" name="productImage">
                         </div>
                         <button type=" submit" class="btn btn-primary">Submit</button>
                     </form>

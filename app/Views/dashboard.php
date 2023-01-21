@@ -32,73 +32,19 @@
             <h1>Catalog</h1>
         </div>
         <div class="row justify-content-md-center">
-            <div class="card">
-                <img class="card-img-top" src="/img/blackforest.jpeg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Black Forest</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <?php foreach ($product as $d) : ?>
+                <div class="card">
+                    <img class="card-img-top" src="/img/<?= $d['product_image']; ?>" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><?= $d['product_name']; ?></h5>
+                        <p class="card-text">Rp. <?= $d['product_price']; ?></p>
+                        <p class="card-text"><?= $d['product_desc']; ?></p>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="/img/blackforest.jpeg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Black Forest</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="/img/blackforest.jpeg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Black Forest</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="/img/blackforest.jpeg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Black Forest</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="/img/blackforest.jpeg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Black Forest</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="/img/blackforest.jpeg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Black Forest</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="/img/blackforest.jpeg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Black Forest</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="/img/blackforest.jpeg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Black Forest</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 
-    <footer class="text-center text-white" style="background-color: #C58940;">
-        <!-- Grid container -->
-        <div class="container p-4">
-            <h5>Toast Bread</h5>
-            <h4>Wholesome Bread for all</h4>
-        </div>
-        <!-- Grid container -->
-    </footer>
     <!-- CSS -->
     <style>
         .catalog {

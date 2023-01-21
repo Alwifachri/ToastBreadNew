@@ -22,9 +22,9 @@
                     <li class="nav-item">
                         <a class="nav-link active text-white" href="/shop">Shop</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link text-white" href="#">Profile</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#">Cart</a>
                     </li>
@@ -46,16 +46,16 @@
                 <?php endif; ?>
                 <form action="/profile/update" method="post">
                     <div class="mb-3">
-                        <label for="InputForName" class="form-label">NAMA :</label>
-                        <input type="text" name="name" class="form-control" id="InputForName" value="<?= set_value('email') ?>">
+                        <label for="name" class="form-label">NAMA :</label>
+                        <input type="text" name="name" class="form-control" id="name" value="<?= $session['user_name']; ?>">
                     </div>
                     <div class="mb-3">
-                        <label for="InputForEmail" class="form-label">Email :</label>
-                        <input type="email" name="email" class="form-control" id="InputForEmail" value="<?= set_value('email') ?>">
+                        <label for="email" class="form-label">Email :</label>
+                        <input type="email" name="email" class="form-control" id="email" value="<?= $session['user_email']; ?>">
                     </div>
                     <div class="mb-3">
-                        <label for="InputForAddress" class="form-label">ALAMAT :</label>
-                        <input type="text" name="address" class="form-control" id="InputForName" value="<?= set_value('address') ?>">
+                        <label for="address" class="form-label">ALAMAT :</label>
+                        <input type="text" name="address" class="form-control" id="address" value="<?= $session['user_address']; ?>">
                     </div>
                     <div class="text-center" style="margin-bottom:25px;">
                         <button type="submit" class="btn btn-lg" style="background-color: #4579f5; color: white;">SIMPAN</button>
@@ -65,14 +65,6 @@
         </div>
     </div>
 
-    <footer class="text-center text-white" style="background-color: #C58940;">
-        <!-- Grid container -->
-        <div class="container p-4">
-            <h5>Toast Bread</h5>
-            <h4>Wholesome Bread for all</h4>
-        </div>
-        <!-- Grid container -->
-    </footer>
     <!-- CSS -->
     <style>
 
